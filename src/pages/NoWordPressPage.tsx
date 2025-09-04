@@ -45,13 +45,13 @@ const NoWordPressPage = () => {
               <span className="text-white">NO WORDPRESS</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">
-                TRADESMAN SITES
+                NO WIX. NO SQUARESPACE.
               </span>
             </h1>
             
             <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              We're the ONLY UK agency that refuses to build tradesman websites on WordPress. 
-              Here's why that matters for your business.
+              We're the ONLY UK agency that refuses WordPress, Wix, Squarespace & all page builders. 
+              100% custom code. Here's why that matters for your business.
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center mb-12">

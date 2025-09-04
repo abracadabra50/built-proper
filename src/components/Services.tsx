@@ -71,7 +71,8 @@ const Services = () => {
         'Smart quote generation',
         'WhatsApp & SMS integration',
         'CRM automation'
-      ]
+      ],
+      link: '/services/ai-automation'
     },
     {
       icon: Code2,
@@ -84,7 +85,8 @@ const Services = () => {
         'Invoice automation',
         'Team collaboration tools',
         'API integrations'
-      ]
+      ],
+      link: '/services/ai-automation'
     },
     {
       icon: Zap,
@@ -97,7 +99,8 @@ const Services = () => {
         'Lead nurturing',
         'Report generation',
         'Multi-channel messaging'
-      ]
+      ],
+      link: '/services/ai-automation'
     }
   ];
 
@@ -251,14 +254,14 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800"
+                className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-orange-500/50 transition-all group"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-orange-600/20 text-orange-400 rounded-xl flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">{service.title}</h4>
                 <p className="text-gray-400 text-sm mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-gray-500 text-sm">
                       <span className="text-orange-400 mr-2">•</span>
@@ -266,6 +269,13 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                <a
+                  href={service.link}
+                  className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-semibold transition-colors group-hover:translate-x-1"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </a>
               </motion.div>
             ))}
           </div>

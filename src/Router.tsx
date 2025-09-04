@@ -27,6 +27,9 @@ const NoWordPressPage = lazy(() => import('./pages/NoWordPressPage'));
 const PlumberWebsitePage = lazy(() => import('./pages/PlumberWebsitePage'));
 const ElectricianWebsitePage = lazy(() => import('./pages/ElectricianWebsitePage'));
 const TradesmanWebsiteExamples = lazy(() => import('./pages/TradesmanWebsiteExamples'));
+const WebsiteCostCalculator = lazy(() => import('./pages/WebsiteCostCalculator'));
+const CheckatradeAlternative = lazy(() => import('./pages/CheckatradeAlternative'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -68,12 +71,16 @@ const AppRouter = () => {
           <Route path="/blog" element={<BlogListingTemplate />} />
           <Route path="/no-wordpress-tradesman-websites" element={<NoWordPressPage />} />
           <Route path="/blog/true-cost-tradesman-websites" element={<TrueCostGuide />} />
+          <Route path="/blog/checkatrade-alternative" element={<CheckatradeAlternative />} />
           <Route path="/blog/local-seo-guide-tradesmen" element={<LocalSEOGuide />} />
           <Route path="/blog/wordpress-holding-you-back" element={<WordPressGuide />} />
           <Route path="/blog/generate-quality-leads" element={<LeadGenerationGuide />} />
           <Route path="/blog/ai-tools-for-trades" element={<AIToolsGuide />} />
           <Route path="/blog/million-pound-trade-business" element={<MillionPoundBusiness />} />
           <Route path="/blog/premium-positioning-trades" element={<PremiumPositioning />} />
+          
+          {/* Tools & Calculators */}
+          <Route path="/website-cost-calculator" element={<WebsiteCostCalculator />} />
           
           {/* Portfolio & Case Studies */}
           <Route path="/tradesman-website-examples" element={<TradesmanWebsiteExamples />} />
@@ -98,6 +105,7 @@ const AppRouter = () => {
           <Route path="/portal" element={<ClientPortal />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/sitemap" element={<Sitemap />} />
         </Routes>
       </Suspense>
     </Router>
