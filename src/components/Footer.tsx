@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight, Star, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const services = [
@@ -95,13 +96,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
-                  <a 
-                    href={service.href} 
+                  <Link 
+                    to={service.href} 
                     className="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -113,13 +114,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <a 
-                    href={resource.href} 
+                  <Link 
+                    to={resource.href} 
                     className="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group"
                   >
                     <span>{resource.name}</span>
                     <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -131,13 +132,13 @@ const Footer = () => {
             <ul className="space-y-3 mb-8">
               {company.map((item) => (
                 <li key={item.name}>
-                  <a 
-                    href={item.href} 
+                  <Link 
+                    to={item.href} 
                     className="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group"
                   >
                     <span>{item.name}</span>
                     <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -164,13 +165,13 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex flex-wrap gap-6 text-sm">
               {legal.map((item) => (
-                <a 
+                <Link 
                   key={item.name}
-                  href={item.href} 
+                  to={item.href} 
                   className="text-gray-400 hover:text-orange-400 transition-colors duration-300"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
             

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, User, ArrowRight, Clock, TrendingUp, Hammer, Search, BarChart3, Users, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const BlogPreview = () => {
   const articles = [
@@ -143,16 +144,16 @@ const BlogPreview = () => {
         {/* Articles Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {articles.map((article, index) => (
-            <motion.a
+            <motion.div
               key={index}
-              href={`/blog/${article.slug}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 cursor-pointer block"
+              className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
             >
+              <Link to={`/blog/${article.slug}`} className="block h-full">
               <div className="flex flex-col lg:flex-row">
                 {/* Image */}
                 <div className="lg:w-1/3 h-48 lg:h-auto relative overflow-hidden">
@@ -209,7 +210,8 @@ const BlogPreview = () => {
                   </div>
                 </div>
               </div>
-            </motion.a>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
@@ -229,18 +231,13 @@ const BlogPreview = () => {
             No spam, just proper tips that work.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300"
-            />
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-orange-500/30"
+            <Link
+              to="/blog"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-orange-500/30 text-center inline-flex items-center justify-center"
             >
-              Subscribe
-            </motion.button>
+              View All Guides
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
         </motion.div>
       </div>
