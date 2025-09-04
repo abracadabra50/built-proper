@@ -13,9 +13,18 @@
     <meta name="theme-color" content="#fb923c" />
     
     <!-- Performance Critical Resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://api.anthropic.com" />
+    
+    <!-- Optimized Font Loading -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+    </noscript>
     
     <!-- Critical CSS Inlined -->
     <style>
@@ -24,9 +33,16 @@
         margin: 0; 
         background: #020617; 
         color: white; 
-        font-family: system-ui, -apple-system, sans-serif;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
       }
       .font-inter { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+      
+      /* Font loading optimization */
+      @font-face {
+        font-family: 'Inter';
+        font-display: swap;
+        src: local('Inter'), local('Inter-Regular');
+      }
     </style>
     
     <!-- Primary SEO Meta Tags -->

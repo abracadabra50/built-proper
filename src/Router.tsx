@@ -1,63 +1,77 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App';
-import CustomWebsites from './pages/CustomWebsites';
-import LocalSEO from './pages/LocalSEO';
-import TradeBranding from './pages/TradeBranding';
-import AIAutomation from './pages/AIAutomation';
-import DigitalMarketing from './pages/DigitalMarketing';
-import BlogListingTemplate from './components/BlogListingTemplate';
-import LocalSEOGuide from './pages/LocalSEOGuide';
-import WordPressGuide from './pages/WordPressGuide';
-import LeadGenerationGuide from './pages/LeadGenerationGuide';
-import AIToolsGuide from './pages/AIToolsGuide';
-import MillionPoundBusiness from './pages/MillionPoundBusiness';
-import PremiumPositioning from './pages/PremiumPositioning';
-import About from './pages/About';
-import Careers from './pages/Careers';
-import Contact from './pages/Contact';
-import CaseStudies from './pages/CaseStudies';
-import HallmarkDrivewaysCaseStudy from './pages/HallmarkDrivewaysCaseStudy';
-import ClientPortal from './pages/ClientPortal';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
+
+// Lazy load all non-critical routes
+const CustomWebsites = lazy(() => import('./pages/CustomWebsites'));
+const LocalSEO = lazy(() => import('./pages/LocalSEO'));
+const TradeBranding = lazy(() => import('./pages/TradeBranding'));
+const AIAutomation = lazy(() => import('./pages/AIAutomation'));
+const DigitalMarketing = lazy(() => import('./pages/DigitalMarketing'));
+const BlogListingTemplate = lazy(() => import('./components/BlogListingTemplate'));
+const LocalSEOGuide = lazy(() => import('./pages/LocalSEOGuide'));
+const WordPressGuide = lazy(() => import('./pages/WordPressGuide'));
+const LeadGenerationGuide = lazy(() => import('./pages/LeadGenerationGuide'));
+const AIToolsGuide = lazy(() => import('./pages/AIToolsGuide'));
+const MillionPoundBusiness = lazy(() => import('./pages/MillionPoundBusiness'));
+const PremiumPositioning = lazy(() => import('./pages/PremiumPositioning'));
+const About = lazy(() => import('./pages/About'));
+const Careers = lazy(() => import('./pages/Careers'));
+const Contact = lazy(() => import('./pages/Contact'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const HallmarkDrivewaysCaseStudy = lazy(() => import('./pages/HallmarkDrivewaysCaseStudy'));
+const ClientPortal = lazy(() => import('./pages/ClientPortal'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-gray-400">Loading...</p>
+    </div>
+  </div>
+);
 
 const AppRouter = () => {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        
-        {/* Service Pages */}
-        <Route path="/services/websites" element={<CustomWebsites />} />
-        <Route path="/services/seo" element={<LocalSEO />} />
-        <Route path="/services/branding" element={<TradeBranding />} />
-        <Route path="/services/ai-automation" element={<AIAutomation />} />
-        <Route path="/services/marketing" element={<DigitalMarketing />} />
-        
-        {/* Blog Pages */}
-        <Route path="/blog" element={<BlogListingTemplate />} />
-        <Route path="/blog/local-seo-guide-tradesmen" element={<LocalSEOGuide />} />
-        <Route path="/blog/wordpress-holding-you-back" element={<WordPressGuide />} />
-        <Route path="/blog/generate-quality-leads" element={<LeadGenerationGuide />} />
-        <Route path="/blog/ai-tools-for-trades" element={<AIToolsGuide />} />
-        <Route path="/blog/million-pound-trade-business" element={<MillionPoundBusiness />} />
-        <Route path="/blog/premium-positioning-trades" element={<PremiumPositioning />} />
-        
-        {/* Case Studies */}
-        <Route path="/case-studies" element={<CaseStudies />} />
-        <Route path="/case-studies/hallmark-driveways-edinburgh" element={<HallmarkDrivewaysCaseStudy />} />
-        
-        {/* Company Pages */}
-        <Route path="/about" element={<About />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/contact" element={<Contact />} />
-        
-        {/* Client & Legal */}
-        <Route path="/portal" element={<ClientPortal />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<App />} />
+          
+          {/* Service Pages */}
+          <Route path="/services/websites" element={<CustomWebsites />} />
+          <Route path="/services/seo" element={<LocalSEO />} />
+          <Route path="/services/branding" element={<TradeBranding />} />
+          <Route path="/services/ai-automation" element={<AIAutomation />} />
+          <Route path="/services/marketing" element={<DigitalMarketing />} />
+          
+          {/* Blog Pages */}
+          <Route path="/blog" element={<BlogListingTemplate />} />
+          <Route path="/blog/local-seo-guide-tradesmen" element={<LocalSEOGuide />} />
+          <Route path="/blog/wordpress-holding-you-back" element={<WordPressGuide />} />
+          <Route path="/blog/generate-quality-leads" element={<LeadGenerationGuide />} />
+          <Route path="/blog/ai-tools-for-trades" element={<AIToolsGuide />} />
+          <Route path="/blog/million-pound-trade-business" element={<MillionPoundBusiness />} />
+          <Route path="/blog/premium-positioning-trades" element={<PremiumPositioning />} />
+          
+          {/* Case Studies */}
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/hallmark-driveways-edinburgh" element={<HallmarkDrivewaysCaseStudy />} />
+          
+          {/* Company Pages */}
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/contact" element={<Contact />} />
+          
+          {/* Client & Legal */}
+          <Route path="/portal" element={<ClientPortal />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 };
