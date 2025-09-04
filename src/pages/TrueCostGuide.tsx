@@ -1,7 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator, TrendingUp, AlertCircle, CheckCircle, XCircle, PoundSterling } from 'lucide-react';
 import BlogPostTemplate from '../components/BlogPostTemplate';
 
 const TrueCostGuide = () => {
@@ -340,21 +336,32 @@ Get Built Proper. Own your digital future.`
     }
   ];
 
-  return (
-    <BlogPostTemplate
-      title="The True Cost of Tradesman Websites in 2025"
-      subtitle="What you'll really pay (and what you should pay) for a trade website"
-      author="Built Proper Team"
-      date="September 2025"
-      readTime="12 min read"
-      category="Website Costs"
-      image="/images/cost-guide-hero.jpg"
-      excerpt="Most tradesman website builders hide the real costs. This guide reveals everything - true prices, hidden fees, ROI calculations, and what you're really paying for. No sales pitch, just honest numbers."
-      sections={sections}
-      relatedPosts={relatedPosts}
-      keywords={['tradesman website cost', 'trade website pricing', 'how much website costs', 'website builder prices']}
-    />
-  );
+  const post = {
+    title: "The True Cost of Tradesman Websites in 2025",
+    subtitle: "What you'll really pay (and what you should pay) for a trade website",
+    author: "Built Proper Team",
+    date: "September 2025",
+    readTime: "12 min read",
+    category: "Website Costs",
+    featured: true,
+    metaDescription: "Most tradesman website builders hide the real costs. This guide reveals everything - true prices, hidden fees, ROI calculations, and what you're really paying for.",
+    keywords: ['tradesman website cost', 'trade website pricing', 'how much website costs', 'website builder prices'],
+    heroImage: "/images/cost-guide-hero.jpg",
+    sections: sections as any, // Type assertion needed due to complex section types
+    relatedPosts: relatedPosts.map(post => ({
+      ...post,
+      slug: post.link,
+      readTime: '5 min'
+    })),
+    cta: {
+      title: 'Ready to Stop Wasting Money?',
+      description: 'Get a proper website that actually generates leads. No monthly fees, no nonsense.',
+      buttonText: 'Get Your Free Quote',
+      buttonLink: '/contact'
+    }
+  };
+
+  return <BlogPostTemplate post={post} />;
 };
 
 export default TrueCostGuide;
