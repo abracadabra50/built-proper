@@ -16,6 +16,8 @@ const AIToolsGuide = lazy(() => import('./pages/AIToolsGuide'));
 const MillionPoundBusiness = lazy(() => import('./pages/MillionPoundBusiness'));
 const PremiumPositioning = lazy(() => import('./pages/PremiumPositioning'));
 const TrueCostGuide = lazy(() => import('./pages/TrueCostGuide'));
+const LondonPage = lazy(() => import('./pages/LondonPage'));
+const ManchesterPage = lazy(() => import('./pages/ManchesterPage'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -62,6 +64,10 @@ const AppRouter = () => {
           {/* Case Studies */}
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/hallmark-driveways-edinburgh" element={<HallmarkDrivewaysCaseStudy />} />
+          
+          {/* Location Pages */}
+          <Route path="/locations/london" element={<LondonPage />} />
+          <Route path="/locations/manchester" element={<ManchesterPage />} />
           
           {/* Company Pages */}
           <Route path="/about" element={<About />} />

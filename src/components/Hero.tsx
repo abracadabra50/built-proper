@@ -73,9 +73,9 @@ const Hero = () => {
               className="space-y-4 max-w-4xl mx-auto"
             >
               <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light leading-relaxed">
-                The UK's premier <span className="text-white font-medium">tradesman website builder</span>.{' '}
+                We build <span className="text-white font-medium">custom websites for UK tradesmen</span>.{' '}
                 <br className="hidden sm:block" />
-                <span className="text-orange-500 font-medium">No WordPress. No templates. Just proper custom websites.</span>
+                <span className="text-orange-500 font-medium">No WordPress. No templates. 100% bespoke development.</span>
               </p>
               
               <p className="text-lg sm:text-xl lg:text-2xl text-white/80 leading-relaxed">
