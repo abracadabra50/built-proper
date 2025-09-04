@@ -173,6 +173,8 @@ const BlogListingTemplate = () => {
               <button
                 key={category.value}
                 onClick={() => setSelectedCategory(category.value)}
+                aria-label={`Filter by ${category.label} category`}
+                aria-pressed={selectedCategory === category.value}
                 className={`px-5 py-2 rounded-full font-medium transition-all ${
                   selectedCategory === category.value
                     ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white'

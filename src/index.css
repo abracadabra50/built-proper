@@ -7,6 +7,28 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Ensure sufficient color contrast */
+.text-gray-400 {
+  color: rgb(156 163 175) !important; /* Improved contrast */
+}
+
+.text-gray-500 {
+  color: rgb(107 114 128) !important; /* Improved contrast */
+}
+
 /* Critical rendering optimisation */
 * {
   -webkit-font-smoothing: antialiased;

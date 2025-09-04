@@ -61,7 +61,8 @@ const Contact = () => {
                   className="w-full p-4 bg-white/10 border-2 border-white/20 rounded-xl focus:border-orange-500 focus:outline-none transition-all duration-300 text-white placeholder-gray-400"
                   required
                 />
-                <select className="w-full p-4 bg-white/10 border-2 border-white/20 rounded-xl focus:border-orange-500 focus:outline-none transition-all duration-300 text-white">
+                <label htmlFor="trade-select" className="sr-only">Select your trade</label>
+                <select id="trade-select" aria-label="Select your trade" className="w-full p-4 bg-white/10 border-2 border-white/20 rounded-xl focus:border-orange-500 focus:outline-none transition-all duration-300 text-white">
                   <option value="">Your Trade</option>
                   <option value="builder">Builder</option>
                   <option value="plumber">Plumber</option>
@@ -83,7 +84,8 @@ const Contact = () => {
                     className="w-full pl-12 pr-4 py-4 bg-white/10 border-2 border-white/20 rounded-xl focus:border-orange-500 focus:outline-none transition-all duration-300 text-white placeholder-gray-400"
                   />
                 </div>
-                <select className="w-full p-4 bg-white/10 border-2 border-white/20 rounded-xl focus:border-orange-500 focus:outline-none transition-all duration-300 text-white">
+                <label htmlFor="timeline-select" className="sr-only">Select project timeline</label>
+                <select id="timeline-select" aria-label="Select project timeline" className="w-full p-4 bg-white/10 border-2 border-white/20 rounded-xl focus:border-orange-500 focus:outline-none transition-all duration-300 text-white">
                   <option value="">Project Timeline</option>
                   <option value="asap">ASAP - Need it now</option>
                   <option value="1week">Within 1 week</option>

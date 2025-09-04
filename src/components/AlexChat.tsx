@@ -299,6 +299,7 @@ const AlexChat = () => {
               </div>
               <button
                 onClick={handleClose}
+                aria-label="Close chat"
                 className="text-white/80 hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
@@ -307,15 +308,15 @@ const AlexChat = () => {
 
             {/* Quick Actions Bar */}
             <div className="bg-slate-800/50 p-3 border-b border-slate-700 flex gap-2">
-              <button className="flex items-center gap-1 bg-slate-700/50 hover:bg-slate-700 px-3 py-1.5 rounded-full text-xs text-gray-300 transition-colors">
+              <button aria-label="Get quick quote" className="flex items-center gap-1 bg-slate-700/50 hover:bg-slate-700 px-3 py-1.5 rounded-full text-xs text-gray-300 transition-colors">
                 <Zap className="w-3 h-3" />
                 Quick Quote
               </button>
-              <button className="flex items-center gap-1 bg-slate-700/50 hover:bg-slate-700 px-3 py-1.5 rounded-full text-xs text-gray-300 transition-colors">
+              <button aria-label="Book a call" className="flex items-center gap-1 bg-slate-700/50 hover:bg-slate-700 px-3 py-1.5 rounded-full text-xs text-gray-300 transition-colors">
                 <Calendar className="w-3 h-3" />
                 Book Call
               </button>
-              <button className="flex items-center gap-1 bg-slate-700/50 hover:bg-slate-700 px-3 py-1.5 rounded-full text-xs text-gray-300 transition-colors">
+              <button aria-label="See our work" className="flex items-center gap-1 bg-slate-700/50 hover:bg-slate-700 px-3 py-1.5 rounded-full text-xs text-gray-300 transition-colors">
                 <Globe className="w-3 h-3" />
                 Our Work
               </button>
@@ -400,6 +401,7 @@ const AlexChat = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleSendMessage}
+                  aria-label="Send message"
                   className="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-full p-2 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
                 >
                   <Send className="w-5 h-5" />
