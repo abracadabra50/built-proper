@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const services = [
     { name: 'Custom Websites', href: '/services/websites' },
+    { name: 'Plumber Websites', href: '/services/plumber-websites' },
+    { name: 'Electrician Websites', href: '/services/electrician-websites' },
     { name: 'Local SEO', href: '/services/seo' },
-    { name: 'Trade Branding', href: '/services/branding' },
-    { name: 'Digital Marketing', href: '/services/marketing' },
     { name: 'AI & Automation', href: '/services/ai-automation' },
     { name: 'View All Services', href: '/#services' }
   ];

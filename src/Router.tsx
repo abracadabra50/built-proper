@@ -19,6 +19,8 @@ const TrueCostGuide = lazy(() => import('./pages/TrueCostGuide'));
 const LondonPage = lazy(() => import('./pages/LondonPage'));
 const ManchesterPage = lazy(() => import('./pages/ManchesterPage'));
 const NoWordPressPage = lazy(() => import('./pages/NoWordPressPage'));
+const PlumberWebsitePage = lazy(() => import('./pages/PlumberWebsitePage'));
+const ElectricianWebsitePage = lazy(() => import('./pages/ElectricianWebsitePage'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -51,6 +53,10 @@ const AppRouter = () => {
           <Route path="/services/branding" element={<TradeBranding />} />
           <Route path="/services/ai-automation" element={<AIAutomation />} />
           <Route path="/services/marketing" element={<DigitalMarketing />} />
+          
+          {/* Trade-Specific Pages */}
+          <Route path="/services/plumber-websites" element={<PlumberWebsitePage />} />
+          <Route path="/services/electrician-websites" element={<ElectricianWebsitePage />} />
           
           {/* Blog Pages */}
           <Route path="/blog" element={<BlogListingTemplate />} />
