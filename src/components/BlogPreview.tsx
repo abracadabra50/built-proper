@@ -5,76 +5,76 @@ import { motion } from 'framer-motion';
 const BlogPreview = () => {
   const articles = [
     {
-      title: 'Best Tradesman Websites UK 2025: Complete Analysis',
-      excerpt: 'We analysed 200+ UK tradesman websites to identify what converts visitors into paying customers. Includes builder, plumber, electrician, and landscaper website examples.',
-      category: 'Web Design',
-      author: 'Built Proper SEO Team',
+      title: 'Why WordPress is Holding Your Trade Business Back',
+      excerpt: 'Discover why custom-built websites outperform WordPress for UK tradesmen. Real data, real results, no fluff.',
+      category: 'Website Strategy',
+      author: 'Built Proper Team',
       date: '15 Aug 2025',
       image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600',
-      readTime: '12 min read',
-      trending: true,
-      icon: Hammer,
-      keywords: 'best tradesman websites UK, builder website design, plumber website examples'
-    },
-    {
-      title: 'Local SEO for Tradesmen 2025: Complete Guide',
-      excerpt: 'How to rank #1 on Google for "near me" searches. Step-by-step local SEO strategy for plumbers, builders, electricians. Includes Google Business Profile optimisation.',
-      category: 'SEO',
-      author: 'Built Proper SEO Team',
-      date: '12 Aug 2025',
-      image: 'https://images.pexels.com/photos/8092507/pexels-photo-8092507.jpeg?auto=compress&cs=tinysrgb&w=600',
-      readTime: '15 min read',
-      trending: true,
-      icon: Search,
-      keywords: 'local SEO for tradesmen, plumber SEO, builder local SEO, Google Business Profile'
-    },
-    {
-      title: 'Why UK Tradesmen Lose £50k+ Per Year Without Websites',
-      excerpt: 'Industry analysis: How poor online presence costs UK tradesmen thousands in lost revenue. Plus the 30-day action plan to fix it and start winning more work.',
-      category: 'Business Growth',
-      author: 'Built Proper Business Team',
-      date: '10 Aug 2025',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
       readTime: '8 min read',
       trending: true,
-      icon: BarChart3,
-      keywords: 'tradesman business growth, UK trade industry statistics, tradesman marketing'
+      icon: Hammer,
+      slug: 'wordpress-holding-you-back'
     },
     {
-      title: 'Emergency Plumber Marketing: Get 10+ Calls Per Day',
-      excerpt: 'Complete marketing strategy for emergency plumbers. How to dominate "emergency plumber near me" searches and generate consistent high-value call-outs.',
-      category: 'Case Study',
-      author: 'Built Proper Marketing Team',
+      title: 'The Complete Guide to Local SEO for UK Tradesmen',
+      excerpt: 'Everything you need to dominate Google in your local area. From "near me" searches to the Map Pack.',
+      category: 'SEO',
+      author: 'Built Proper Team',
+      date: '12 Aug 2025',
+      image: 'https://images.pexels.com/photos/8092507/pexels-photo-8092507.jpeg?auto=compress&cs=tinysrgb&w=600',
+      readTime: '12 min read',
+      trending: true,
+      icon: Search,
+      slug: 'local-seo-guide-tradesmen'
+    },
+    {
+      title: 'How to Generate 100+ Quality Leads Per Month',
+      excerpt: 'The exact system we use to flood our clients with quality enquiries. No theory, just proven tactics.',
+      category: 'Lead Generation',
+      author: 'Built Proper Team',
+      date: '10 Aug 2025',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
+      readTime: '10 min read',
+      trending: true,
+      icon: BarChart3,
+      slug: 'generate-quality-leads'
+    },
+    {
+      title: 'AI Tools That Actually Work for Trade Businesses',
+      excerpt: 'Cut through the AI hype. Here are the tools that genuinely save time and make money for tradesmen.',
+      category: 'Technology',
+      author: 'Built Proper Team',
       date: '8 Aug 2025',
       image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600',
-      readTime: '10 min read',
-      trending: false,
-      icon: Users,
-      keywords: 'emergency plumber marketing, plumber Google Ads, emergency call generation'
-    },
-    {
-      title: 'Builder Website Design 2025: What Converts Customers',
-      excerpt: 'Analysis of high-converting builder websites. Design elements, copy, and features that turn website visitors into booked jobs for construction companies.',
-      category: 'Web Design',
-      author: 'Built Proper Design Team',
-      date: '5 Aug 2025',
-      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600',
-      readTime: '9 min read',
-      trending: false,
-      icon: Hammer,
-      keywords: 'builder website design, construction company websites, builder marketing'
-    },
-    {
-      title: 'Electrician SEO 2025: Rank #1 for Electrical Services',
-      excerpt: 'Complete SEO guide for electricians. How to rank for high-value keywords like "electrician near me", "emergency electrician", and commercial electrical services.',
-      category: 'SEO',
-      author: 'Built Proper SEO Team',
-      date: '3 Aug 2025',
-      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600',
-      readTime: '11 min read',
+      readTime: '7 min read',
       trending: false,
       icon: Zap,
-      keywords: 'electrician SEO, electrical services SEO, electrician Google ranking'
+      slug: 'ai-tools-for-trades'
+    },
+    {
+      title: 'Building a £1M+ Trade Business: The Digital Blueprint',
+      excerpt: 'How modern tradesmen are scaling to seven figures using proper digital systems and automation.',
+      category: 'Business Growth',
+      author: 'Built Proper Team',
+      date: '5 Aug 2025',
+      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600',
+      readTime: '15 min read',
+      trending: true,
+      icon: Hammer,
+      slug: 'million-pound-trade-business'
+    },
+    {
+      title: 'Stop Competing on Price: Position Your Trade as Premium',
+      excerpt: 'Learn how to charge 30% more than competitors by positioning your trade business properly.',
+      category: 'Business Strategy',
+      author: 'Built Proper Team',
+      date: '3 Aug 2025',
+      image: 'https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=600',
+      readTime: '9 min read',
+      trending: false,
+      icon: Users,
+      slug: 'premium-positioning-trades'
     }
   ];
 
@@ -143,14 +143,15 @@ const BlogPreview = () => {
         {/* Articles Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {articles.map((article, index) => (
-            <motion.article 
+            <motion.a
               key={index}
+              href={`/blog/${article.slug}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
+              className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 cursor-pointer block"
             >
               <div className="flex flex-col lg:flex-row">
                 {/* Image */}
@@ -201,14 +202,14 @@ const BlogPreview = () => {
                       </span>
                     </div>
                     
-                    <button className="flex items-center text-orange-400 hover:text-orange-300 font-bold group-hover:translate-x-1 transition-all duration-300">
-                      Read More
+                    <span className="flex items-center text-orange-400 hover:text-orange-300 font-bold group-hover:translate-x-1 transition-all duration-300">
+                      Read Guide
                       <ArrowRight className="ml-1 w-4 h-4" />
-                    </button>
+                    </span>
                   </div>
                 </div>
               </div>
-            </motion.article>
+            </motion.a>
           ))}
         </div>
 
