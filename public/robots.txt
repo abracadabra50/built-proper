@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://builtproper.com/sitemap.xml
+
+# Built Proper - Custom websites for UK tradesmen
+# No WordPress, just proper solutions
+# Contact: hello@builtproper.com
