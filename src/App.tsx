@@ -6,6 +6,7 @@ import Services from './components/Services';
 import CaseStudies from './components/CaseStudies';
 import QuoteTool from './components/QuoteTool';
 import BlogPreview from './components/BlogPreview';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -24,6 +25,7 @@ function App() {
           <CaseStudies />
           <QuoteTool />
           <BlogPreview />
+          <FAQ />
           <Contact />
         </div>
       </main>

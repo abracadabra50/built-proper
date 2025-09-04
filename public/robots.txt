@@ -1,8 +1,26 @@
 User-agent: *
 Allow: /
+Crawl-delay: 0
 
-# Sitemap
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /.env
+
+# Sitemap location
 Sitemap: https://builtproper.com/sitemap.xml
+
+# Allow all search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
 
 # Built Proper - Custom websites for UK tradesmen
 # No WordPress, just proper solutions
