@@ -283,3 +283,4 @@ const CheckatradeAlternative = () => {
 };
 
 export default CheckatradeAlternative;
+

@@ -37,10 +37,22 @@ Once verified:
 1. Go to Sitemaps section
 2. Submit: `https://builtproper.com/sitemap.xml`
 
-### 4. Test MCP Connection
+### 4. Set up Google Analytics Authentication
+```bash
+# Run the setup script we created
+/Users/zishan/mcp-seo-tools/setup_ga_auth.sh
+
+# This will:
+# 1. Check for gcloud CLI
+# 2. Create OAuth configuration
+# 3. Open browser for authentication
+# 4. Save credentials locally
+```
+
+### 5. Test MCP Connections
 After restarting Cursor:
-- The GSC MCP should now authenticate using OAuth
-- Test with: "List my GSC properties"
+- **GSC MCP:** ✅ Already working! Test with "List my GSC properties"
+- **GA4 MCP:** Test with "Show me my Google Analytics properties"
 
 ## 🔐 Security Notes
 
@@ -72,3 +84,4 @@ Once MCP is connected:
 ---
 
 **Status:** Ready for deployment and GSC verification! 🎉
+

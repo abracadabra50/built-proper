@@ -67,3 +67,4 @@ const EdinburghPage = () => {
 };
 
 export default EdinburghPage;
+
