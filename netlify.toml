@@ -47,5 +47,5 @@
   pretty_urls = true
 
 # Form handling (for contact forms)
-[build.functions]
+[functions]
   directory = "netlify/functions"
