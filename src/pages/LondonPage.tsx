@@ -48,7 +48,7 @@ const LondonPage = () => {
       intro: `As London's leading custom website development agency for tradesmen, we understand the unique challenges 
         of operating in the capital. With over 50,000 trade businesses competing for attention, having a 
         professional website isn't optional - it's essential for survival. We specialise in building bespoke websites 
-        for London plumbers, electricians, builders, decorators, carpenters, and all other trades.`,
+        for London plumbers, electricians, builders, decorators, joiners, and all other trades.`,
       
       whyCustom: `London customers expect professionalism. They research online before calling, compare multiple quotes, 
         and choose tradesmen who appear trustworthy and established. A professional website instantly elevates 

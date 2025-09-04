@@ -67,7 +67,7 @@ const Contact = () => {
                   <option value="builder">Builder</option>
                   <option value="plumber">Plumber</option>
                   <option value="electrician">Electrician</option>
-                  <option value="carpenter">Carpenter</option>
+                  <option value="joiner">Joiner</option>
                   <option value="painter">Painter & Decorator</option>
                   <option value="roofer">Roofer</option>
                   <option value="landscaper">Landscaper</option>

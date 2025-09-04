@@ -40,7 +40,7 @@
 - Electrician website design
 - Builder/Construction websites
 - Roofer website design
-- Carpenter/Joiner websites
+- Joiner websites
 - Painter & Decorator sites
 - Landscaper website design
 - Bathroom fitter websites

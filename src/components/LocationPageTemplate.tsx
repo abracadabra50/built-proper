@@ -329,7 +329,7 @@ const LocationPageTemplate: React.FC<LocationPageTemplateProps> = ({ data }) => 
               { name: 'Electricians', icon: Building2, link: '/services/electrician-websites' },
               { name: 'Builders', icon: Hammer, link: '/services/websites' },
               { name: 'Decorators', icon: Building2, link: '/services/websites' },
-              { name: 'Carpenters', icon: Hammer, link: '/services/websites' },
+              { name: 'Joiners', icon: Hammer, link: '/services/websites' },
               { name: 'Roofers', icon: Building2, link: '/services/websites' }
             ].map((trade, index) => (
               <motion.div
