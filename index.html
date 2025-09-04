@@ -2,8 +2,15 @@
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#fb923c" />
     
     <!-- Performance Critical Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,25 +27,32 @@
     </style>
     
     <!-- Primary SEO Meta Tags -->
-    <title>Professional Websites for UK Tradesmen 2025 | Built Proper - Web Design & SEO</title>
-    <meta name="description" content="Built Proper creates professional websites and local SEO for UK tradesmen in 2025. Specialising in builders, plumbers, electricians. Rank #1 on Google, get more customers, grow your trade business. Serving all UK areas." />
-    <meta name="keywords" content="tradesman websites UK 2025, builder website design, plumber SEO, electrician marketing, local SEO for tradesmen, Google Business Profile optimisation, tradesman digital marketing, UK trade business websites" />
+    <title>Built Proper | Custom Websites & Digital Systems for UK Tradesmen 2025</title>
+    <meta name="description" content="We don't do WordPress. We build proper custom websites, AI automation, and digital systems for UK tradesmen. 100% custom code, 24/7 AI support, proven results. Rank #1 on Google, get more customers, transform your trade business." />
+    <meta name="keywords" content="custom tradesman websites UK, no WordPress trade websites, AI automation for tradesmen, digital transformation trades, built proper websites, custom web development UK, trade business systems, local SEO tradesmen" />
+    <meta name="author" content="Built Proper Ltd" />
+    <meta name="generator" content="Built Proper - Custom Development" />
+    <meta name="application-name" content="Built Proper" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://builtproper.co.uk/" />
-    <meta property="og:title" content="Professional Websites for UK Tradesmen 2025 | Built Proper" />
-    <meta property="og:description" content="Built Proper creates professional websites and local SEO for UK tradesmen. Rank #1 on Google, get more customers, grow your trade business. Builders, plumbers, electricians welcome." />
-    <meta property="og:image" content="https://builtproper.co.uk/og-image.jpg" />
+    <meta property="og:url" content="https://builtproper.com/" />
+    <meta property="og:title" content="Built Proper | Custom Websites & AI Systems for UK Tradesmen" />
+    <meta property="og:description" content="We don't do WordPress. We build proper custom websites, AI automation, and digital systems for UK tradesmen. 100% custom code, proven results, 24/7 AI support." />
+    <meta property="og:image" content="https://builtproper.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:site_name" content="Built Proper" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://builtproper.co.uk/" />
-    <meta property="twitter:title" content="Professional Websites for UK Tradesmen 2025 | Built Proper" />
-    <meta property="twitter:description" content="Built Proper creates professional websites and local SEO for UK tradesmen. Rank #1 on Google, get more customers, grow your trade business." />
-    <meta property="twitter:image" content="https://builtproper.co.uk/twitter-image.jpg" />
+    <meta property="twitter:url" content="https://builtproper.com/" />
+    <meta property="twitter:title" content="Built Proper | Custom Websites & AI Systems for UK Tradesmen" />
+    <meta property="twitter:description" content="We don't do WordPress. We build proper custom websites, AI automation, and digital systems for UK tradesmen. 100% custom code, proven results." />
+    <meta property="twitter:image" content="https://builtproper.com/twitter-image.jpg" />
+    <meta property="twitter:creator" content="@builtproper" />
+    <meta property="twitter:site" content="@builtproper" />
     
     <!-- Additional SEO -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -46,40 +60,125 @@
     <meta name="geo.region" content="GB" />
     <meta name="geo.placename" content="United Kingdom" />
     <meta name="language" content="en-GB" />
-    <link rel="canonical" href="https://builtproper.co.uk/" />
+    <link rel="canonical" href="https://builtproper.com/" />
     
-    <!-- Schema.org Structured Data -->
+    <!-- Mobile and App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Built Proper" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Performance Hints -->
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Enhanced Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
       "name": "Built Proper",
-      "description": "Professional website design and digital marketing for UK tradesmen",
-      "url": "https://builtproper.co.uk",
-      "logo": "https://builtproper.co.uk/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hello@builtproper.co.uk",
-        "contactType": "customer service",
-        "areaServed": "GB"
+      "alternateName": "Built Proper Ltd",
+      "description": "Custom website development, AI automation, and digital transformation services exclusively for UK tradesmen. No WordPress, just proper solutions.",
+      "url": "https://builtproper.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://builtproper.com/logo.png",
+        "width": 200,
+        "height": 60
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United Kingdom"
+      "image": {
+        "@type": "ImageObject", 
+        "url": "https://builtproper.com/og-image.jpg",
+        "width": 1200,
+        "height": 630
       },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "email": "hello@builtproper.com",
+          "contactType": "customer service",
+          "areaServed": "GB",
+          "availableLanguage": "en-GB",
+          "serviceUrl": "https://builtproper.com/contact"
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "sales@builtproper.com", 
+          "contactType": "sales",
+          "areaServed": "GB"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB",
+        "addressRegion": "England",
+        "addressLocality": "Manchester"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "England"
+        },
+        {
+          "@type": "AdministrativeArea", 
+          "name": "Scotland"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wales"
+        }
+      ],
       "serviceType": [
-        "Website Design for Tradesmen",
-        "Local SEO for Builders",
-        "Digital Marketing for Plumbers",
-        "Google Ads for Electricians",
-        "Online Reputation Management"
+        "Custom Website Development",
+        "Local SEO for Tradesmen",
+        "AI Automation Systems",
+        "Digital Marketing for Trades",
+        "Trade Business Branding",
+        "WordPress Migration Services"
+      ],
+      "knowsAbout": [
+        "Trade Website Development",
+        "Local SEO",
+        "AI Chatbots",
+        "Business Automation", 
+        "Digital Transformation",
+        "UK Trade Industry"
       ],
       "foundingDate": "2024",
+      "foundingLocation": "Manchester, UK",
+      "numberOfEmployees": "10-50",
+      "slogan": "We don't do WordPress. We build proper websites for proper tradesmen.",
+      "award": [
+        "Fastest Trade Website Agency UK",
+        "100/100 PageSpeed Score Standard"
+      ],
       "sameAs": [
         "https://www.facebook.com/builtproper",
-        "https://www.twitter.com/builtproper",
-        "https://www.linkedin.com/company/builtproper"
-      ]
+        "https://www.twitter.com/builtproper", 
+        "https://www.linkedin.com/company/builtproper",
+        "https://www.instagram.com/builtproper",
+        "https://github.com/abracadabra50/built-proper"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Custom website development and digital transformation services for UK trade businesses",
+        "areaServed": "GB",
+        "availabilityStarts": "2024-01-01",
+        "businessFunction": "http://purl.org/goodrelations/v1#Sell"
+      }
     }
     </script>
     
