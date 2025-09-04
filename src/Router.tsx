@@ -15,6 +15,7 @@ const LeadGenerationGuide = lazy(() => import('./pages/LeadGenerationGuide'));
 const AIToolsGuide = lazy(() => import('./pages/AIToolsGuide'));
 const MillionPoundBusiness = lazy(() => import('./pages/MillionPoundBusiness'));
 const PremiumPositioning = lazy(() => import('./pages/PremiumPositioning'));
+const TrueCostGuide = lazy(() => import('./pages/TrueCostGuide'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -50,6 +51,7 @@ const AppRouter = () => {
           
           {/* Blog Pages */}
           <Route path="/blog" element={<BlogListingTemplate />} />
+          <Route path="/blog/true-cost-tradesman-websites" element={<TrueCostGuide />} />
           <Route path="/blog/local-seo-guide-tradesmen" element={<LocalSEOGuide />} />
           <Route path="/blog/wordpress-holding-you-back" element={<WordPressGuide />} />
           <Route path="/blog/generate-quality-leads" element={<LeadGenerationGuide />} />
