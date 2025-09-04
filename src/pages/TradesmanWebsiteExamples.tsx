@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const TradesmanWebsiteExamples = () => {
   const [selectedTrade, setSelectedTrade] = useState('all');
@@ -176,6 +177,7 @@ const TradesmanWebsiteExamples = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden">

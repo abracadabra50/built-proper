@@ -3,6 +3,7 @@ import { Calendar, User, Clock, ArrowLeft, ArrowRight, Share2, BookOpen, CheckCi
 import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
+import Breadcrumbs from './Breadcrumbs';
 import AlexChat from './AlexChat';
 
 interface BlogPostProps {
@@ -40,6 +41,7 @@ const BlogPostTemplate: React.FC<BlogPostProps> = ({ post }) => {
   return (
     <div className="font-inter antialiased bg-slate-950">
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">

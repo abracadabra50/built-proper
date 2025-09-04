@@ -29,6 +29,7 @@ const ElectricianWebsitePage = lazy(() => import('./pages/ElectricianWebsitePage
 const TradesmanWebsiteExamples = lazy(() => import('./pages/TradesmanWebsiteExamples'));
 const WebsiteCostCalculator = lazy(() => import('./pages/WebsiteCostCalculator'));
 const CheckatradeAlternative = lazy(() => import('./pages/CheckatradeAlternative'));
+const NoWixWebsites = lazy(() => import('./pages/NoWixWebsites'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
@@ -70,6 +71,7 @@ const AppRouter = () => {
           {/* Blog Pages */}
           <Route path="/blog" element={<BlogListingTemplate />} />
           <Route path="/no-wordpress-tradesman-websites" element={<NoWordPressPage />} />
+          <Route path="/no-wix-tradesman-websites" element={<NoWixWebsites />} />
           <Route path="/blog/true-cost-tradesman-websites" element={<TrueCostGuide />} />
           <Route path="/blog/checkatrade-alternative" element={<CheckatradeAlternative />} />
           <Route path="/blog/local-seo-guide-tradesmen" element={<LocalSEOGuide />} />

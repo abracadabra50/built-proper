@@ -5,6 +5,7 @@ import { MapPin, Star, TrendingUp, Users, Award, ArrowRight, CheckCircle, Buildi
 import Header from './Header';
 import Footer from './Footer';
 import FAQ from './FAQ';
+import Breadcrumbs from './Breadcrumbs';
 
 interface LocationData {
   city: string;
@@ -40,6 +41,7 @@ const LocationPageTemplate: React.FC<LocationPageTemplateProps> = ({ data }) => 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 lg:px-8 overflow-hidden">
