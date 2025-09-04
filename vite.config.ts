@@ -23,8 +23,7 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           motion: ['framer-motion'],
           icons: ['lucide-react'],
-          router: ['react-router-dom'],
-          anthropic: ['@anthropic-ai/sdk']
+          router: ['react-router-dom']
         },
       },
     },
