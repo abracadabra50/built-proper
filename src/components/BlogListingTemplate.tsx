@@ -151,11 +151,14 @@ const BlogListingTemplate = () => {
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <label htmlFor="search-guides" className="sr-only">Search guides and articles</label>
                 <input
+                  id="search-guides"
                   type="text"
                   placeholder="Search guides..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+                  aria-label="Search guides and articles"
                   className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-white/10 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-orange-500/50 transition-all"
                 />
               </div>

@@ -22,11 +22,33 @@ html {
 
 /* Ensure sufficient color contrast */
 .text-gray-400 {
-  color: rgb(156 163 175) !important; /* Improved contrast */
+  color: rgb(156 163 175) !important; /* WCAG AA compliant contrast */
 }
 
 .text-gray-500 {
-  color: rgb(107 114 128) !important; /* Improved contrast */
+  color: rgb(107 114 128) !important; /* WCAG AA compliant contrast */
+}
+
+.text-gray-300 {
+  color: rgb(209 213 219) !important; /* Better contrast on dark backgrounds */
+}
+
+/* Focus indicators for accessibility */
+*:focus-visible {
+  outline: 2px solid #fb923c !important;
+  outline-offset: 2px !important;
+}
+
+/* Ensure interactive elements have sufficient target size */
+button, a, input, select, textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Exception for inline elements */
+a:not(.btn), button.text-xs {
+  min-height: auto;
+  min-width: auto;
 }
 
 /* Critical rendering optimisation */

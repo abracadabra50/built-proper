@@ -39,10 +39,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' }
+    { icon: Facebook, href: 'https://www.facebook.com/builtproper', label: 'Built Proper on Facebook' },
+    { icon: Twitter, href: 'https://www.twitter.com/builtproper', label: 'Built Proper on Twitter' },
+    { icon: Instagram, href: 'https://www.instagram.com/builtproper', label: 'Built Proper on Instagram' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/builtproper', label: 'Built Proper on LinkedIn' }
   ];
 
   return (

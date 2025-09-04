@@ -389,12 +389,15 @@ const AlexChat = () => {
             {/* Input */}
             <div className="p-4 border-t border-slate-800">
               <div className="flex gap-2">
+                <label htmlFor="chat-input" className="sr-only">Type your message to Alex</label>
                 <input
+                  id="chat-input"
                   type="text"
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                   placeholder="Type your message..."
+                  aria-label="Type your message to Alex"
                   className="flex-1 bg-slate-800 text-white placeholder-gray-500 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/50"
                 />
                 <motion.button
