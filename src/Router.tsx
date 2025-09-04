@@ -18,6 +18,7 @@ const PremiumPositioning = lazy(() => import('./pages/PremiumPositioning'));
 const TrueCostGuide = lazy(() => import('./pages/TrueCostGuide'));
 const LondonPage = lazy(() => import('./pages/LondonPage'));
 const ManchesterPage = lazy(() => import('./pages/ManchesterPage'));
+const NoWordPressPage = lazy(() => import('./pages/NoWordPressPage'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -53,6 +54,7 @@ const AppRouter = () => {
           
           {/* Blog Pages */}
           <Route path="/blog" element={<BlogListingTemplate />} />
+          <Route path="/no-wordpress-tradesman-websites" element={<NoWordPressPage />} />
           <Route path="/blog/true-cost-tradesman-websites" element={<TrueCostGuide />} />
           <Route path="/blog/local-seo-guide-tradesmen" element={<LocalSEOGuide />} />
           <Route path="/blog/wordpress-holding-you-back" element={<WordPressGuide />} />
