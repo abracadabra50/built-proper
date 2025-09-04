@@ -1,10 +1,35 @@
 import React from 'react';
-import { Calendar, User, ArrowRight, Clock, TrendingUp, Hammer, Search, BarChart3, Users, Zap } from 'lucide-react';
+import { Calendar, User, ArrowRight, Clock, TrendingUp, Hammer, Search, BarChart3, Users, Zap, PoundSterling, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const BlogPreview = () => {
   const articles = [
+    {
+      title: 'The True Cost of Tradesman Websites in 2025',
+      excerpt: 'What you\'ll really pay for a trade website. Hidden fees, true costs, and what you should actually expect to pay.',
+      category: 'Website Costs',
+      author: 'Built Proper Team',
+      date: '4 Sep 2025',
+      image: 'https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=600',
+      readTime: '12 min read',
+      trending: true,
+      icon: PoundSterling,
+      slug: 'true-cost-tradesman-websites'
+    },
+    {
+      title: 'Why We Don\'t Use WordPress for Tradesman Sites',
+      excerpt: 'The ONLY UK agency refusing WordPress. Security risks, performance issues, and hidden costs exposed.',
+      category: 'No WordPress',
+      author: 'Built Proper Team',
+      date: '4 Sep 2025',
+      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=600',
+      readTime: '15 min read',
+      trending: true,
+      icon: Shield,
+      slug: 'no-wordpress-tradesman-websites',
+      isPage: true
+    },
     {
       title: 'Why WordPress is Holding Your Trade Business Back',
       excerpt: 'Discover why custom-built websites outperform WordPress for UK tradesmen. Real data, real results, no fluff.',
@@ -153,7 +178,7 @@ const BlogPreview = () => {
               whileHover={{ y: -8 }}
               className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 cursor-pointer"
             >
-              <Link to={`/blog/${article.slug}`} className="block h-full">
+              <Link to={article.isPage ? `/${article.slug}` : `/blog/${article.slug}`} className="block h-full">
               <div className="flex flex-col lg:flex-row">
                 {/* Image */}
                 <div className="lg:w-1/3 h-48 lg:h-auto relative overflow-hidden">

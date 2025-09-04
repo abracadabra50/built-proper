@@ -16,10 +16,19 @@ const Footer = () => {
   const resources = [
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog & Guides', href: '/blog' },
+    { name: 'No WordPress', href: '/no-wordpress-tradesman-websites' },
+    { name: 'True Costs Guide', href: '/blog/true-cost-tradesman-websites' },
     { name: 'Client Portal', href: '/portal' },
-    { name: 'Get Quote', href: '/contact' },
-    { name: 'Book Call', href: '/contact' },
-    { name: 'Support', href: '/contact' }
+    { name: 'Get Quote', href: '/contact' }
+  ];
+
+  const locations = [
+    { name: 'London Websites', href: '/locations/london' },
+    { name: 'Manchester Websites', href: '/locations/manchester' },
+    { name: 'Birmingham (Coming Soon)', href: '#' },
+    { name: 'Leeds (Coming Soon)', href: '#' },
+    { name: 'Glasgow (Coming Soon)', href: '#' },
+    { name: 'All UK Locations', href: '/contact' }
   ];
 
   const company = [
@@ -48,7 +57,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-6 gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex flex-col -space-y-1">
@@ -119,6 +128,24 @@ const Footer = () => {
                     className="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group"
                   >
                     <span>{resource.name}</span>
+                    <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations Column */}
+          <div>
+            <h3 className="text-lg font-bold mb-6">Locations</h3>
+            <ul className="space-y-3">
+              {locations.map((location) => (
+                <li key={location.name}>
+                  <Link 
+                    to={location.href} 
+                    className="text-gray-300 hover:text-orange-400 transition-colors duration-300 flex items-center group"
+                  >
+                    <span>{location.name}</span>
                     <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                   </Link>
                 </li>

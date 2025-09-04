@@ -16,9 +16,10 @@ const Header = () => {
 
   const navigation = [
     { name: 'Services', href: '/#services' },
+    { name: 'No WordPress', href: '/no-wordpress-tradesman-websites' },
     { name: 'Our Work', href: '/#work' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
+    { name: 'Resources', href: '/blog' },
+    { name: 'Locations', href: '/locations/london' },
     { name: 'Contact', href: '/#contact' }
   ];
 

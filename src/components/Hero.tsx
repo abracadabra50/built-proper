@@ -1,4 +1,4 @@
-import { ArrowRight, Play, CheckCircle } from 'lucide-react';
+import { ArrowRight, Play, CheckCircle, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -131,13 +131,13 @@ const Hero = () => {
               </motion.a>
               
               <motion.a
-                href="#work"
+                href="/no-wordpress-tradesman-websites"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group border border-white/20 hover:border-orange-500/50 text-white hover:text-orange-400 font-medium px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10 text-base inline-flex items-center justify-center"
+                className="group border border-red-500/30 hover:border-red-500/50 text-white hover:text-red-400 font-medium px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm bg-red-500/10 hover:bg-red-500/20 text-base inline-flex items-center justify-center"
               >
-                <Play className="mr-2 w-5 h-5" />
-                See Our Work
+                <AlertTriangle className="mr-2 w-5 h-5" />
+                Why No WordPress?
               </motion.a>
             </motion.div>
 
