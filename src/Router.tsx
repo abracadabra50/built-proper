@@ -18,9 +18,15 @@ const PremiumPositioning = lazy(() => import('./pages/PremiumPositioning'));
 const TrueCostGuide = lazy(() => import('./pages/TrueCostGuide'));
 const LondonPage = lazy(() => import('./pages/LondonPage'));
 const ManchesterPage = lazy(() => import('./pages/ManchesterPage'));
+const EdinburghPage = lazy(() => import('./pages/EdinburghPage'));
+const GlasgowPage = lazy(() => import('./pages/GlasgowPage'));
+const LeedsPage = lazy(() => import('./pages/LeedsPage'));
+const BristolPage = lazy(() => import('./pages/BristolPage'));
+const BirminghamPage = lazy(() => import('./pages/BirminghamPage'));
 const NoWordPressPage = lazy(() => import('./pages/NoWordPressPage'));
 const PlumberWebsitePage = lazy(() => import('./pages/PlumberWebsitePage'));
 const ElectricianWebsitePage = lazy(() => import('./pages/ElectricianWebsitePage'));
+const TradesmanWebsiteExamples = lazy(() => import('./pages/TradesmanWebsiteExamples'));
 const About = lazy(() => import('./pages/About'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -69,13 +75,19 @@ const AppRouter = () => {
           <Route path="/blog/million-pound-trade-business" element={<MillionPoundBusiness />} />
           <Route path="/blog/premium-positioning-trades" element={<PremiumPositioning />} />
           
-          {/* Case Studies */}
+          {/* Portfolio & Case Studies */}
+          <Route path="/tradesman-website-examples" element={<TradesmanWebsiteExamples />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/hallmark-driveways-edinburgh" element={<HallmarkDrivewaysCaseStudy />} />
           
           {/* Location Pages */}
           <Route path="/locations/london" element={<LondonPage />} />
           <Route path="/locations/manchester" element={<ManchesterPage />} />
+          <Route path="/locations/edinburgh" element={<EdinburghPage />} />
+          <Route path="/locations/glasgow" element={<GlasgowPage />} />
+          <Route path="/locations/leeds" element={<LeedsPage />} />
+          <Route path="/locations/bristol" element={<BristolPage />} />
+          <Route path="/locations/birmingham" element={<BirminghamPage />} />
           
           {/* Company Pages */}
           <Route path="/about" element={<About />} />

@@ -14,21 +14,23 @@ const Footer = () => {
   ];
 
   const resources = [
+    { name: 'Portfolio', href: '/tradesman-website-examples' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog & Guides', href: '/blog' },
     { name: 'No WordPress', href: '/no-wordpress-tradesman-websites' },
     { name: 'True Costs Guide', href: '/blog/true-cost-tradesman-websites' },
-    { name: 'Client Portal', href: '/portal' },
     { name: 'Get Quote', href: '/contact' }
   ];
 
   const locations = [
     { name: 'London Websites', href: '/locations/london' },
     { name: 'Manchester Websites', href: '/locations/manchester' },
-    { name: 'Birmingham (Coming Soon)', href: '#' },
-    { name: 'Leeds (Coming Soon)', href: '#' },
-    { name: 'Glasgow (Coming Soon)', href: '#' },
-    { name: 'All UK Locations', href: '/contact' }
+    { name: 'Birmingham Websites', href: '/locations/birmingham' },
+    { name: 'Edinburgh Websites', href: '/locations/edinburgh' },
+    { name: 'Glasgow Websites', href: '/locations/glasgow' },
+    { name: 'Leeds Websites', href: '/locations/leeds' },
+    { name: 'Bristol Websites', href: '/locations/bristol' },
+    { name: 'All UK Coverage', href: '/contact' }
   ];
 
   const company = [

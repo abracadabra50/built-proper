@@ -16,8 +16,8 @@ const Header = () => {
 
   const navigation = [
     { name: 'Services', href: '/#services' },
+    { name: 'Portfolio', href: '/tradesman-website-examples' },
     { name: 'No WordPress', href: '/no-wordpress-tradesman-websites' },
-    { name: 'Our Work', href: '/#work' },
     { name: 'Resources', href: '/blog' },
     { name: 'Locations', href: '/locations/london' },
     { name: 'Contact', href: '/#contact' }
