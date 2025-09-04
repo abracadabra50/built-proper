@@ -20,10 +20,51 @@
     <!-- Critical CSS Inlined -->
     <style>
       /* Critical above-the-fold styles */
-      body { margin: 0; background: #020617; color: white; font-family: system-ui, -apple-system, sans-serif; }
+      * { box-sizing: border-box; }
+      body { 
+        margin: 0; 
+        background: #020617; 
+        color: white; 
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      
+      /* Critical hero styles */
+      .hero-container {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #020617, #0f172a, #020617);
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      
+      .hero-title {
+        font-size: clamp(3rem, 8vw, 8rem);
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+        color: white;
+        margin: 0;
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(to right, #fbbf24, #fb923c, #f97316);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-style: italic;
+        transform: skewX(-5deg);
+      }
+      
+      /* Prevent layout shift */
       .font-inter { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-      /* Prevent FOUC */
-      .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      img, video { height: auto; max-width: 100%; }
+      
+      /* Loading state */
+      .loading { opacity: 0; }
+      .loaded { opacity: 1; transition: opacity 0.3s ease; }
     </style>
     
     <!-- Primary SEO Meta Tags -->
@@ -83,8 +124,11 @@
     <meta name="format-detection" content="telephone=no" />
     
     <!-- Performance Hints -->
-    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin />
     
     <!-- Enhanced Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -195,9 +239,12 @@
     }
     </script>
     
-    <!-- Optimised Font Loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <!-- Optimised Font Loading - Critical weights only -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Preload critical font subset -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <div id="root"></div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -25,7 +24,7 @@ const Hero = () => {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               className="inline-flex items-center"
             >
               <div className="relative">
@@ -43,7 +42,7 @@ const Hero = () => {
                 <motion.span 
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
                   className="block text-white tracking-tighter"
                 >
                   BUILT
@@ -51,7 +50,7 @@ const Hero = () => {
                 <motion.span 
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
                   className="block bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent italic"
                   style={{ transform: 'skewX(-5deg)' }}
                 >
@@ -59,7 +58,7 @@ const Hero = () => {
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: '100%' }}
-                    transition={{ duration: 0.6, delay: 0.8 }}
+                    transition={{ duration: 0.4, delay: 0.4 }}
                     className="h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mt-2"
                   />
                 </motion.span>

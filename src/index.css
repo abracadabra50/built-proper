@@ -2,9 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Performance optimisations */
+/* Performance critical optimisations */
 html {
   scroll-behavior: smooth;
+}
+
+/* Critical rendering path optimization */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    margin: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    background-color: #020617;
+    color: white;
+    overflow-x: hidden;
+  }
 }
 
 /* Critical rendering optimisation */
